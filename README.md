@@ -73,3 +73,20 @@ The new .csv with the predicted probability of a store location was then importe
 
 Since each town on Long Island had a corresponding zip code, Tableau was easily able to map it onto its map feature. Two maps were then created, and a dual axis was used to put two different map stories on top of eachother. 
   
+
+### 4) Application
+
+The goal was to find the most similar locations to those of the existing Kay Jewelers stores, based on the limited demographic variables being used. From analysis, the top 10 locations are as follows (zip codes):
+
+| Zip Code  | Final_Probability |
+|-----------|-------------------|
+| 11742     | 0.92              |
+| 11772     | 0.81              |
+| 11542     | 0.78              |
+| 11703     | 0.77              |
+| 11550     | 0.76              |
+| 11021     | 0.76              |
+| 11795     | 0.72              |
+| 11783     | 0.71              |
+| 11780     | 0.70              |
+| 11010     | 0.69              |
