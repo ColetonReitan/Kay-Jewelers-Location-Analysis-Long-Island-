@@ -44,4 +44,32 @@ This was noted by an additional binary column.
 
   - Store Present  
     Binary column noting if a Kay Jewelers store is present per town (binary, 1 yes, 0 no)  
-    
+
+   
+### 2) Employing a Machine Learning Model
+
+The original data is very biased, as there are only 10 Kay Jewelers stores on Long Island. In order to correct for this SMOTE was used to oversample the minority class (making the imbalanced data balanced).   
+
+Once the classes were balanced, a Random Forest Classifier machine learning model was used to determine (and score a probability) of the likelihood for a Kay Jewelers store in towns on Long Island.   
+
+
+#### Model Confusion Matrix
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.94      | 0.68   | 0.79     | 47      |
+| 1     | 0.06      | 0.33   | 0.11     | 3       |
+| **Accuracy**  |       |        | 0.66     | 50      |
+| **Macro Avg** | 0.50      | 0.51   | 0.45     | 50      |
+| **Weighted Avg** | 0.89  | 0.66   | 0.75     | 50      |
+
+Based on this confusion table, it can be seen that there may be lower than anticipated reliability in determining areas where a Kay Jewelers store is located. However, this could be attributed to the class imbalance and creation of artificial data through the use of SMOTE.  
+The model does do a good job of determining locations where a store is not, so the model is totally invaluable.   
+
+The predicted probability of a store location for each town was then kept in the dataframe. Following, the dataframe was downloaded to a csv. 
+
+### 3) Creating Dashboard in Tableau
+
+The new .csv with the predicted probability of a store location was then imported into Tableau. After dashboard creation, the dashboard was put into Tableau Public. 
+
+Since each town on Long Island had a corresponding zip code, Tableau was easily able to map it onto its map feature. Two maps were then created, and a dual axis was used to put two different map stories on top of eachother. 
+  
